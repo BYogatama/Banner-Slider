@@ -16,6 +16,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -158,6 +159,7 @@ public class Slider extends FrameLayout {
 
     private void onAdapterAttached() {
         if (pendingPosition != RecyclerView.NO_POSITION) {
+
             recyclerView.smoothScrollToPosition(pendingPosition);
             onImageSlideChange(pendingPosition);
             pendingPosition = RecyclerView.NO_POSITION;
@@ -207,6 +209,7 @@ public class Slider extends FrameLayout {
                     return false;
                 }
             }, positionController);
+
 
             recyclerView.setAdapter(adapter);
             positionController.setRecyclerViewAdapter(adapter);

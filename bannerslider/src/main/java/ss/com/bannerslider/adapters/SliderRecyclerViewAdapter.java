@@ -1,6 +1,5 @@
 package ss.com.bannerslider.adapters;
 
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,7 +40,6 @@ public class SliderRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView
             ImageView imageView = new ImageView(parent.getContext());
             imageView.setLayoutParams(imageViewLayoutParams);
             imageView.setAdjustViewBounds(true);
-            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             return new ImageSlideViewHolder(imageView);
         } else {
             return null;
@@ -81,6 +79,5 @@ public class SliderRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView
     public void setLoop(boolean loop) {
         this.loop = loop;
     }
-
 
 }
